@@ -19,7 +19,7 @@ def classificacao(imc):
 usuarios = []
 
 # input de quantidade de usuarios para calcular o IMC
-total_usuarios = int(input('Digite o total de usuarios:'))
+total_usuarios = int(input('Digite o total de usuarios: '))
 
 # usando um 'for' para iterar para cada quantidade de usuarios informados no input acima
 for i in range(total_usuarios):
@@ -41,12 +41,17 @@ for i in range(total_usuarios):
 
     usuarios.append(relatorio)
 
-# visualização dos dados informados atraves do input
-print("\n===Relatório final===")
-print(f'{'Nome':<10}{'Altura':<10}{'Peso':<10}{'IMC':<10}{'Classificacao'}')
-print("-" * 50)
+# visualização dos dados informados atraves do input e criação de um documento txt com os dados 
+with open('Relatório.txt', 'w', encoding='utf-8') as new_file:
+    cabecalho = "\n===Relatório final===\n"
+    cabecalho += f'{'Nome':<10}{'Altura':<10}{'Peso':<10}{'IMC':<10}{'Classificacao'}\n'
+    cabecalho += "-" * 50 + "\n"
 
+    print(cabecalho)
+    new_file.write(cabecalho)
 
-for i in usuarios:
-    print(f"{i['Nome']:<10}{i['Altura']:<10.2f}{i['Peso']:<10.1f}{i['IMC']:<10.2f}{i['Classificação']}")
+    for i in usuarios:
 
+        linhas = f"{i['Nome']:<10}{i['Altura']:<10.2f}{i['Peso']:<10.1f}{i['IMC']:<10.2f}{i['Classificação']}\n"
+        print(linhas) 
+        new_file.write(linhas)
