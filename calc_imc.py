@@ -21,7 +21,7 @@ usuarios = []
 # input de quantidade de usuarios para calcular o IMC
 total_usuarios = int(input('Digite o total de usuarios:'))
 
-# loop para cada usuarios definido no input
+# usando um 'for' para iterar para cada quantidade de usuarios informados no input acima
 for i in range(total_usuarios):
 
     nome = input('Digite seu nome: ')
@@ -41,6 +41,7 @@ for i in range(total_usuarios):
 
     usuarios.append(relatorio)
 
+# visualização dos dados informados atraves do input
 print("\n===Relatório final===")
 print(f'{'Nome':<10}{'Altura':<10}{'Peso':<10}{'IMC':<10}{'Classificacao'}')
 print("-" * 50)
