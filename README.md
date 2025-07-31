@@ -1,6 +1,6 @@
 # Calculadora de IMC
 
-Este projeto calcula o IMC de uma ou mais pessoas, classifica o resultado e salva em um arquivo `.csv`.
+Este projeto calcula o IMC de uma ou mais pessoas e classifica o resultado.
 
 # Como usar
 1. Execute o script Python
